@@ -1,13 +1,9 @@
-import 'package:appwarehouse/widgets/product_grid.dart';
-import 'package:appwarehouse/widgets/product_item.dart';
-import 'package:flutter/material.dart';
-import 'package:appwarehouse/models/product.dart';
-import 'package:appwarehouse/widgets/product_item.dart';
+import 'package:flutter/cupertino.dart';
+import '../models/product.dart';
+class Products with ChangeNotifier{
 
-class ProductssOverviewScreen extends StatelessWidget{
-  final List<Product> loadedProducts = [
-
-    Product(
+  List<Product> _items=[
+      Product(
       id: 'p1',
       title: 'Red Shirt',
       description: 'A red shirt - it is pretty red!',
@@ -31,26 +27,24 @@ class ProductssOverviewScreen extends StatelessWidget{
       imageUrl:
       'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
     )
-
-
   ];
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
 
-      appBar: AppBar(
+  List<Product> get items {
 
-        title: Text("My shop"),
-      ),
-      body: 
-      
-      new ProductGrid(),
+    return [..._items];
+  }
 
-    );
+  Product findById(String id) {
+    return _items.firstWhere((prod) => prod.id == id);
+  }
+
+  void addProduct(){
+
+    notifyListeners();
   }
 
 
 
-}
 
+
+}
