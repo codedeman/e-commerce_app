@@ -15,7 +15,7 @@ class ProductsOverviewScreen extends StatefulWidget {
 class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   var _showOnlyFavorites = false;
 
-  var test =  false;
+  var test =  true;
   final chain = "Hello word";
 
   @override
