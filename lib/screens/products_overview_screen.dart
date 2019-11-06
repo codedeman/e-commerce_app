@@ -18,6 +18,8 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
 
   var test =  false;
   final chain = "Best of steam";
+  var test =  true;
+  final chain = "Hello word";
 
   @override
   Widget build(BuildContext context) {
