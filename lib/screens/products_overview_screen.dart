@@ -16,6 +16,9 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   var _showOnlyFavorites = false;
   final showFavorite = false;
 
+  var test =  false;
+  final chain = "Hello word";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
