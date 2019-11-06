@@ -13,7 +13,7 @@ class ProductsOverviewScreen extends StatefulWidget {
 }
 
 class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
-  var _showOnlyFavorites = false;
+  var _showOnlyFavorites = true;
   final showFavorite = false;
 
   var test =  false;
