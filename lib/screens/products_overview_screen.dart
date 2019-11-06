@@ -1,8 +1,6 @@
 import 'package:appwarehouse/widgets/product_grid.dart';
 import 'package:flutter/material.dart';
-import '../widgets/product_grid.dart';
 
-// import '../widgets/products_grid.dart';
 
 enum FilterOptions {
   Favorites,
@@ -16,6 +14,7 @@ class ProductsOverviewScreen extends StatefulWidget {
 
 class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   var _showOnlyFavorites = false;
+  final showFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +48,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           ),
         ],
       ),
-      body: ProductGrid(),
+      body: ProductsGrid(_showOnlyFavorites),
     );
   }
 }
